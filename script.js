@@ -1,4 +1,4 @@
-// Carrousel JS
+// Carrousel
 if (document.querySelector('.carrousel-slide')) {
   const slides = document.querySelectorAll('.carrousel-slide');
   const prevBtn = document.getElementById('prev');
@@ -28,7 +28,7 @@ if (document.querySelector('.carrousel-slide')) {
   showSlide(current);
 }
 
-// Liste de courses JS
+// Liste de courses
 if (document.getElementById('course-form')) {
   const form = document.getElementById('course-form');
   const input = document.getElementById('course-input');
@@ -80,7 +80,7 @@ if (document.getElementById('course-form')) {
   };
 }
 
-// Score Keeper JS
+// Score Keeper
 if (document.getElementById('btn-p1')) {
   let score1 = 0;
   let score2 = 0;
@@ -92,17 +92,15 @@ if (document.getElementById('btn-p1')) {
   const btnP2 = document.getElementById('btn-p2');
   const btnReset = document.getElementById('btn-reset');
 
-  function updateDisplay() {
+  function update() {
     scoreP1.textContent = score1;
     scoreP2.textContent = score2;
     if (score1 >= max) {
       scoreP1.style.color = 'green';
-      scoreP2.style.color = '';
       btnP1.disabled = true;
       btnP2.disabled = true;
     } else if (score2 >= max) {
       scoreP2.style.color = 'green';
-      scoreP1.style.color = '';
       btnP1.disabled = true;
       btnP2.disabled = true;
     } else {
@@ -113,28 +111,26 @@ if (document.getElementById('btn-p1')) {
     }
   }
 
-  btnP1.onclick = function() {
+  btnP1.addEventListener('click', function() {
     if (score1 < max && score2 < max) {
       score1++;
-      updateDisplay();
+      update();
     }
-  };
-  btnP2.onclick = function() {
-    if (score1 < max && score2 < max) {
+  });
+  btnP2.addEventListener('click', function() {
+    if (score2 < max && score1 < max) {
       score2++;
-      updateDisplay();
+      update();
     }
-  };
-  btnReset.onclick = function() {
+  });
+  btnReset.addEventListener('click', function() {
     score1 = 0;
     score2 = 0;
-    updateDisplay();
-  };
-  scoreMax.oninput = function() {
+    update();
+  });
+  scoreMax.addEventListener('input', function() {
     max = parseInt(scoreMax.value) || 1;
-    btnP1.disabled = false;
-    btnP2.disabled = false;
-    updateDisplay();
-  };
-  updateDisplay();
+    update();
+  });
+  update();
 }
