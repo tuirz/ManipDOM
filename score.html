@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang=""fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManipDOM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ManipDOM</h1>
+        <h3>Score Keeper</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Carrousel</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="score.html">Score</a></li>
+                <li><a href="https://fr.linkedin.com/in/luigi-soufar">À propos</a></li>
+                <li><a href="mailto:tuirzz@icloud.com">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="score-keeper">
+            <h2>Score Keeper</h2>
+            <div class="score-display">
+                <span id="score-p1">0</span> - <span id="score-p2">0</span>
+            </div>
+            <div class="score-max">
+                Score max : <input type="number" id="score-max" value="5" min="1" style="width: 50px;">
+            </div>
+            <div class="score-buttons">
+                <button id="btn-p1">Player 1</button>
+                <button id="btn-p2">Player 2</button>
+                <button id="btn-reset">Reset</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ManipDOM. Réalisé par <a title=Linkedin href=https://fr.linkedin.com/in/luigi-soufar>
+            Luigi SOUFAR</a> pour SIMPLON DEV Front P4 Lens</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

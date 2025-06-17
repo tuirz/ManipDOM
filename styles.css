@@ -4,19 +4,28 @@ nav ul { display: flex; justify-content: center; gap: 16px; list-style: none; pa
 nav a { color: #fff; text-decoration: none; }
 nav a:hover { color: #ff9800; }
 main { display: flex; flex-direction: column; align-items: center; min-height: 60vh; }
-.carrousel { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; 
-    padding: 32px 16px 32px 16px; margin: 32px 0; width: 340px; }
-.carrousel-container { display: flex; justify-content: center; align-items: center; 
-    height: 140px; margin-bottom: 24px; }
-.carrousel-slide { display: none; font-size: 2rem; font-weight: bold; color: #333; 
-    background: #eee; border-radius: 4px; padding: 48px 0; width: 280px; text-align: center; }
+footer { position: fixed; left: 0; bottom: 0; width: 100%; z-index: 10; }
+footer a { color: #ff9800; }
+footer a:hover { color: #fff; }
+.carrousel, .score-keeper, .courses { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; margin: 24px auto; max-width: 340px; text-align: center; }
+.carrousel { padding: 32px 16px 32px 16px; width: 340px; }
+.score-keeper, .courses { padding: 20px 12px; max-width: 320px; }
+.carrousel-container { display: flex; justify-content: center; align-items: center; height: 140px; margin-bottom: 24px; }
+.carrousel-slide { display: none; font-size: 2rem; font-weight: bold; color: #333; background: #eee; border-radius: 4px; padding: 48px 0; width: 280px; text-align: center; }
 .carrousel-slide.active { display: block; background: #ff9800; color: #fff; }
 .carrousel-slide.slide-2 { background: #4caf50; color: #fff; }
 .carrousel-slide.slide-3 { background: #2196f3; color: #fff; }
-.carrousel-button { background: #ff9800; color: #fff; border: none; border-radius: 3px; 
-    padding: 6px 12px; font-size: 1rem; margin: 0 4px; cursor: pointer; }
-.carrousel-button:hover { background: #222; color: #ff9800; }
+.carrousel-button, .score-buttons button, .courses button, .course-actions button { background: #ff9800; color: #fff; border: none; border-radius: 3px; font-size: 1rem; cursor: pointer; transition: background 0.2s, color 0.2s; }
+.carrousel-button, .score-buttons button, .course-actions button { padding: 8px 14px; margin: 0 6px; }
+.courses button[type="submit"] { padding: 6px 10px; }
+.carrousel-button:hover, .score-buttons button:hover:not(:disabled), .courses button[type="submit"]:hover, .course-actions button:hover { background: #222; color: #ff9800; }
+.score-buttons button:disabled { opacity: 0.5; cursor: not-allowed; }
 .carrousel-buttons { display: flex; justify-content: space-between; width: 100%; margin-top: 16px; }
-footer { position: fixed; left: 0; bottom: 0; width: 100%; z-index: 10;}
-footer a { color: #ff9800; }
-footer a:hover { color: #fff; }
+.score-display { font-size: 2rem; font-weight: bold; margin: 12px 0; }
+.score-max { margin-bottom: 12px; font-size: 1rem; }
+.courses form { display: flex; gap: 6px; margin-bottom: 12px; }
+.courses input[type="text"] { flex: 1; padding: 6px; border-radius: 3px; border: 1px solid #ccc; font-size: 1rem; }
+.courses ul { list-style: none; padding: 0; margin: 0 0 8px 0; }
+.courses li { background: #eee; margin: 4px 0; padding: 6px; border-radius: 3px; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+.courses li:hover { background: #ff9800; color: #fff; }
+.course-actions { display: flex; justify-content: center; gap: 6px; margin-bottom: 6px; }

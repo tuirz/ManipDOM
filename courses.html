@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=""fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManipDOM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ManipDOM</h1>
+        <h3>Ma liste de courses</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Carrousel</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="score.html">Score</a></li>
+                <li><a href="https://fr.linkedin.com/in/luigi-soufar">À propos</a></li>
+                <li><a href="mailto:tuirzz@icloud.com">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="courses">
+            <form id="course-form">
+                <input type="text" id="course-input" placeholder="Ajouter un article" required>
+                <button type="submit">Ajouter</button>
+            </form>
+            <ul id="course-list"></ul>
+        </section>
+        <section class="course-actions">
+            <button id="clear-courses">Vider la liste</button>
+            <button id="save-courses">Sauvegarder la liste</button>
+            <button id="load-courses">Charger la liste</button>
+            <button id="sort-courses">Trier la liste</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 ManipDOM. Réalisé par <a title=Linkedin href=https://fr.linkedin.com/in/luigi-soufar>
+            Luigi SOUFAR</a> pour SIMPLON DEV Front P4 Lens</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
